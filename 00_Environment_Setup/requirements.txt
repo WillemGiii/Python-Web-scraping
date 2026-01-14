@@ -1,0 +1,22 @@
+# Web Scraping Requirements for Python 3.14
+# Core HTTP library
+requests>=2.32.0
+
+# HTML/XML parsing
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# Web automation
+selenium>=4.38.0
+
+# File downloading utility
+wget>=3.2
+
+# Windows 系統沒有內建標準格式的資料庫
+tzdata
+
+# 數據分析與處理工具
+pandas>=2.2.0
+
+# 環境變數管理工具
+python-dotenv

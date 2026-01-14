@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Implicit Wait 教學示範</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .status-box {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e8f0fe;
+            color: #1967d2;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* 按鈕樣式 */
+        #dynamic_element {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        #dynamic_element:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Implicit Wait 機制測試</h1>
+        <p>此頁面模擬 AJAX 非同步請求，元素將延遲載入。</p>
+
+        <div id="status-display" class="status-box">
+            正在等待伺服器回應... <span id="timer">0</span>s
+        </div>
+
+        <div id="target-area"></div>
+    </div>
+
+    <script>
+        // 設定延遲時間 (毫秒)
+        const DELAY_TIME = 8000;
+        let seconds = 0;
+
+        // 計時器視覺效果，讓學生感覺到時間流逝
+        const timerInterval = setInterval(() => {
+            seconds++;
+            document.getElementById('timer').innerText = seconds;
+            if (seconds >= DELAY_TIME / 1000) {
+                clearInterval(timerInterval);
+            }
+        }, 1000);
+
+        // 核心邏輯：模擬延遲載入
+        setTimeout(function () {
+            // 1. 建立按鈕元素
+            var btn = document.createElement("button");
+
+            // 2. 設定必要的屬性 (ID 與 文字)
+            btn.id = "dynamic_element";
+            btn.innerText = "美好的事物值得等待，它會在該來的時候來";
+
+            // 3. 點擊後的簡單回饋 (驗證用)
+            btn.onclick = function () {
+                alert("測試成功：Selenium 成功抓取到延遲載入的元素！");
+            };
+
+            // 4. 將元素掛載到 DOM 上 (此時 Selenium 才能 find_element)
+            document.getElementById("target-area").appendChild(btn);
+
+            // 更新狀態文字
+            document.getElementById("status-display").innerText = "資源載入完成 (HTTP 200 OK)";
+            document.getElementById("status-display").style.backgroundColor = "#d4edda";
+            document.getElementById("status-display").style.color = "#155724";
+
+        }, DELAY_TIME);
+    </script>
+
+</body>
+
+</html>

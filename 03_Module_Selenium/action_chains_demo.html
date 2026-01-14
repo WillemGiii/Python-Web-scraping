@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium ActionChains & Interaction 綜合練習</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            padding-bottom: 100px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        /* 1. Cookie 遮罩層 (Overlay) */
+        #cookie-overlay {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* 確保遮擋住底層元素 */
+            transition: opacity 0.5s;
+        }
+
+        #cookie-btn {
+            padding: 10px 20px;
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        /* 2. 搜尋表單 */
+        .search-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* 3. ActionChains: Hover Menu */
+        .menu-container {
+            margin-top: 20px;
+        }
+
+        .menu {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            cursor: pointer;
+            position: relative;
+            border-radius: 4px;
+        }
+
+        /* 子選單預設隱藏 */
+        #submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #0056b3;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 4px;
+        }
+
+        #submenu a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        #submenu a:hover {
+            background-color: #004494;
+        }
+
+        /* CSS Hover 效果 (Selenium 需模擬此行為) */
+        .menu:hover #submenu {
+            display: block;
+        }
+
+        /* 4. ActionChains: Drag and Drop */
+        .drag-area {
+            display: flex;
+            gap: 50px;
+            margin-top: 20px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        #draggable {
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+            border-radius: 8px;
+            user-select: none;
+        }
+
+        #droppable {
+            width: 120px;
+            height: 120px;
+            background-color: #ecf0f1;
+            border: 2px dashed #bdc3c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .highlight {
+            background-color: #2ecc71 !important;
+            color: white;
+            border-color: #27ae60 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="cookie-overlay">
+        <div>本網站使用 Cookies 以優化您的體驗 (這是遮擋層，不關閉無法操作底層元素)</div>
+        <button id="cookie-btn" onclick="closeCookie()">我同意 (Accept Cookies)</button>
+    </div>
+
+    <h1>Selenium 互動操作實驗室</h1>
+
+    <section>
+        <h2>1. 表單輸入 (Typing & Submit)</h2>
+        <div class="search-container">
+            <form action="javascript:void(0);" onsubmit="submitForm()">
+                <label for="search">搜尋關鍵字：</label>
+                <input type="text" id="search" name="q" placeholder="請輸入內容...">
+            </form>
+            <p id="search-result" style="color: green; font-weight: bold; margin-top: 10px;"></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. 滑鼠懸停與點擊 (Hover & Click)</h2>
+        <p>請嘗試懸停在下方按鈕，點擊出現的子選單。</p>
+        <div class="menu-container">
+            <div class="menu" id="menu-hover">
+                主選單 (Hover Me)
+                <div id="submenu">
+                    <a href="#" id="link-option-1" onclick="clickSubMenu()">子選單項目 1</a>
+                </div>
+            </div>
+        </div>
+        <p id="menu-result" style="color: blue; margin-top: 10px;"></p>
+    </section>
+
+    <section>
+        <h2>3. 拖曳功能 (Drag & Drop)</h2>
+        <div class="drag-area">
+            <div id="draggable" draggable="true">拖我</div>
+            <div id="droppable">放在這</div>
+        </div>
+        <p id="drag-result" style="color: purple; font-weight: bold;"></p>
+    </section>
+
+    <script>
+        // Cookie 關閉邏輯
+        function closeCookie() {
+            document.getElementById('cookie-overlay').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('cookie-overlay').style.display = 'none';
+            }, 500);
+        }
+
+        // 表單提交邏輯
+        function submitForm() {
+            const val = document.getElementById('search').value;
+            document.getElementById('search-result').innerText = "搜尋送出成功： " + val;
+            // 模擬頁面跳轉的效果
+            window.scrollTo(0, 0);
+        }
+
+        // 選單點擊邏輯
+        function clickSubMenu() {
+            document.getElementById('menu-result').innerText = "成功點擊了子選單項目！";
+        }
+
+        // 簡單的 Drag & Drop 模擬 (配合 Selenium ActionChains)
+        const dragger = document.getElementById('draggable');
+        const dropper = document.getElementById('droppable');
+
+        // 這裡用簡單的事件監聽，讓 Selenium 的 drag_and_drop 可以觸發效果
+        dragger.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', 'drag');
+        });
+
+        dropper.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        dropper.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropper.classList.add('highlight');
+            dropper.innerText = "已放置";
+            document.getElementById('drag-result').innerText = "拖曳任務完成 (Dropped)!";
+        });
+    </script>
+</body>
+
+</html>

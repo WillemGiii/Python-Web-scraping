@@ -1,0 +1,6532 @@
+{
+ "cwaopendata": {
+  "@xmlns": "urn:cwa:gov:tw:cwacommon:0.1",
+  "Identifier": "8d009765-e72b-495e-bc88-05ec54adc009",
+  "DatasetID": "O-MMC-0001",
+  "DatasetName": "即時海況觀測",
+  "DataItemID": "O-MMC-0001-00004",
+  "Sender": "od@cwa.gov.tw",
+  "Sent": "2026-04-20T11:06:02+08:00",
+  "Status": "Actual",
+  "Scope": "Public",
+  "MsgType": "Issue",
+  "Resources": {
+   "Resource": {
+    "Metadata": {
+     "ResourceID": "O-MMC-0001-00004",
+     "ResourceName": "中央氣象署海象觀測_浮標站與潮位站測站資料",
+     "ResourceDescription": "中央氣象署所屬本島各站之潮位資料皆根據內政部國土測繪中心所公告之一等水準點以及潮位站參考水準點高程值引測至臺灣高程基準(TWVD2001)，即以基隆平均海水面當作零點。離島潮位站(例如:澎湖、金門、馬祖、蘭嶼、綠島等)或是海上觀測樁通常引測至當地平均海水面當作零點，並未聯測回臺灣本島。全臺各地之即時海象觀測資料，內容包含潮位站、資料浮標站、波浪站等觀測站，觀測項目包含潮位、海溫、波浪、風、氣壓、海流等等氣象元素。stationStatus與obsStatus為空值表示無資料回傳，0表示 無觀測，1表示 傳送，2表示 停送。",
+     "Language": "zh",
+     "Sources": {
+      "Source": [
+       {
+        "Title": "即時海況所屬觀測站說明",
+        "Path": "https://opendata.cwa.gov.tw/dataset/forecast/O-B0076-001",
+        "Description": "請到中央氣象署氣象資料開放平臺提供的連結取得所需說明資料"
+       },
+       {
+        "Title": "Abbreviation for unit of measure - as defined within WMO No. 306 Common code-table C-6 1List of units for TDCFs1. (use wmo abbreviation)",
+        "Path": "http://codes.wmo.int/common/unit"
+       }
+      ]
+     },
+     "Temporal": {
+      "Description": "即時海況觀測狀態 / 更新頻率為每天",
+      "Update": "2026-04-20T11:06:02+08:00"
+     },
+     "Spatial": {
+      "CoordinateReferenceSystem": {
+       "EPSGCode": "EPSG:4326",
+       "CoordinateName": "WGS84",
+       "CoordinateDatum": "World Geodetic System 1984(EPSG:6326)",
+       "CoordinateFormat": "decimal degrees"
+      }
+     }
+    },
+    "Data": {
+     "SeaSurfaceObs": {
+      "Location": [
+       {
+        "Station": {
+         "StationID": "46761F",
+         "StationName": "成功浮球式波浪站",
+         "StationNameEN": "Chenggong Wave Station",
+         "StationLongitude": "121.4201",
+         "StationLatitude": "23.1325",
+         "StationAttribute": "浮球站",
+         "StationAttributeEN": "Buoy Station",
+         "StationAddress": "三仙臺海岬北面約700公尺，水深約28公尺",
+         "StationAddressEN": "About 700 meters north of Sanxiantai Cape, the water depth is about 28 meters",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "成功鎮",
+          "TownNameEN": "Chenggong Township"
+         },
+         "Area": {
+          "AreaName": "成功大武沿海",
+          "AreaNameEN": "Chenggong Dawu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,SeaTemperature",
+         "ObservedProperties": {
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4A06",
+         "StationName": "淡海潮位站",
+         "StationNameEN": "Danhai",
+         "StationLongitude": "121.4075",
+         "StationLatitude": "25.1839",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "漁人碼頭第3泊地外堤",
+         "StationAddressEN": "Tamsui District Fishing Port in New Taipei City",
+         "County": {
+          "CountyName": "新北市",
+          "CountyNameEN": "New Taipei City"
+         },
+         "Town": {
+          "TownName": "淡水區",
+          "TownNameEN": "Danshui District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "4",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4A03",
+         "StationName": "麟山鼻潮位站",
+         "StationNameEN": "Linshanbi",
+         "StationLongitude": "121.5103",
+         "StationLatitude": "25.2839",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "石門鄉麟山鼻漁港",
+         "StationAddressEN": "Linshanbi Fishing Port in Shimen Township",
+         "County": {
+          "CountyName": "新北市",
+          "CountyNameEN": "New Taipei City"
+         },
+         "Town": {
+          "TownName": "石門區",
+          "TownNameEN": "Shimen District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4A01",
+         "StationName": "淡水潮位站",
+         "StationNameEN": "Danshuei",
+         "StationLongitude": "121.4248",
+         "StationLatitude": "25.1757",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "淡水河油車口",
+         "StationAddressEN": "Youchekou at Tamsui River",
+         "County": {
+          "CountyName": "新北市",
+          "CountyNameEN": "New Taipei City"
+         },
+         "Town": {
+          "TownName": "淡水區",
+          "TownNameEN": "Danshui District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "8",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4B01",
+         "StationName": "基隆潮位站",
+         "StationNameEN": "Keelung",
+         "StationLongitude": "121.7522",
+         "StationLatitude": "25.1550",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "基隆港西33號碼頭",
+         "StationAddressEN": "West No.33 Wharf at Keelung Harbor",
+         "County": {
+          "CountyName": "基隆市",
+          "CountyNameEN": "Keelung City"
+         },
+         "Town": {
+          "TownName": "中山區",
+          "TownNameEN": "Zhongshan District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4C01",
+         "StationName": "竹圍潮位站",
+         "StationNameEN": "Jhuwei",
+         "StationLongitude": "121.2433",
+         "StationLatitude": "25.1181",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "桃園竹圍漁港",
+         "StationAddressEN": "Zhuwei Fishing Port in Taoyuan",
+         "County": {
+          "CountyName": "桃園市",
+          "CountyNameEN": "Taoyuan City"
+         },
+         "Town": {
+          "TownName": "大園區",
+          "TownNameEN": "Dayuan District"
+         },
+         "Area": {
+          "AreaName": "新竹鹿港沿海",
+          "AreaNameEN": "Hsinchu-Lugang inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "6",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4A02",
+         "StationName": "龍洞潮位站",
+         "StationNameEN": "Longdong",
+         "StationLongitude": "121.9181",
+         "StationLatitude": "25.0975",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "龍洞遊艇港內",
+         "StationAddressEN": "Inside Longdong Boat Harbor",
+         "County": {
+          "CountyName": "新北市",
+          "CountyNameEN": "New Taipei City"
+         },
+         "Town": {
+          "TownName": "貢寮區",
+          "TownNameEN": "Gongliao District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "1",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4A05",
+         "StationName": "福隆潮位站",
+         "StationNameEN": "Fulong",
+         "StationLongitude": "121.9503",
+         "StationLatitude": "25.0217",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "福隆漁港碼頭",
+         "StationAddressEN": "Fishing Port Wharf at Fulong Village",
+         "County": {
+          "CountyName": "新北市",
+          "CountyNameEN": "New Taipei City"
+         },
+         "Town": {
+          "TownName": "貢寮區",
+          "TownNameEN": "Gongliao District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4U02",
+         "StationName": "烏石潮位站",
+         "StationNameEN": "Wushih",
+         "StationLongitude": "121.8396",
+         "StationLatitude": "24.8686",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "宜蘭烏石港",
+         "StationAddressEN": "Yilan Wushi Harbor",
+         "County": {
+          "CountyName": "宜蘭縣",
+          "CountyNameEN": "Yilan County"
+         },
+         "Town": {
+          "TownName": "頭城鎮",
+          "TownNameEN": "Toucheng Township"
+         },
+         "Area": {
+          "AreaName": "宜蘭蘇澳沿海",
+          "AreaNameEN": "Yilan-Su-ao inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4D01",
+         "StationName": "新竹潮位站",
+         "StationNameEN": "Hsinchu",
+         "StationLongitude": "120.9206",
+         "StationLatitude": "24.8486",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "新竹漁港南防波堤",
+         "StationAddressEN": "Hsinchu Fishing Port",
+         "County": {
+          "CountyName": "新竹市",
+          "CountyNameEN": "Hsinchu City"
+         },
+         "Town": {
+          "TownName": "北區",
+          "TownNameEN": "N. District"
+         },
+         "Area": {
+          "AreaName": "新竹鹿港沿海",
+          "AreaNameEN": "Hsinchu-Lugang inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4E01",
+         "StationName": "外埔潮位站",
+         "StationNameEN": "Waipu",
+         "StationLongitude": "120.7714",
+         "StationLatitude": "24.6514",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "海埔里外埔漁港",
+         "StationAddressEN": "Haipuli Waipu Fishing Port",
+         "County": {
+          "CountyName": "苗栗縣",
+          "CountyNameEN": "Miaoli County"
+         },
+         "Town": {
+          "TownName": "後龍鎮",
+          "TownNameEN": "Houlong Township"
+         },
+         "Area": {
+          "AreaName": "新竹鹿港沿海",
+          "AreaNameEN": "Hsinchu-Lugang inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4U01",
+         "StationName": "蘇澳潮位站",
+         "StationNameEN": "Su-ao",
+         "StationLongitude": "121.8658",
+         "StationLatitude": "24.5925",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "蘇澳港內",
+         "StationAddressEN": "Inside Su-ao Harbor",
+         "County": {
+          "CountyName": "宜蘭縣",
+          "CountyNameEN": "Yilan County"
+         },
+         "Town": {
+          "TownName": "蘇澳鎮",
+          "TownNameEN": "Suao Township"
+         },
+         "Area": {
+          "AreaName": "宜蘭蘇澳沿海",
+          "AreaNameEN": "Yilan-Su-ao inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4G01",
+         "StationName": "鹿港潮位站",
+         "StationNameEN": "Lukang",
+         "StationLongitude": "120.4204",
+         "StationLatitude": "24.0849",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "彰化縣鹿港鎮崙尾灣漁港",
+         "StationAddressEN": "Lukang, Changhua County, the town of Lun Mei Wan Fishing",
+         "County": {
+          "CountyName": "彰化縣",
+          "CountyNameEN": "Changhua County"
+         },
+         "Town": {
+          "TownName": "鹿港鎮",
+          "TownNameEN": "Lugang Township"
+         },
+         "Area": {
+          "AreaName": "鹿港東石沿海",
+          "AreaNameEN": "Lugang-Dongshi inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4T01",
+         "StationName": "花蓮潮位站",
+         "StationNameEN": "Hualien",
+         "StationLongitude": "121.6236",
+         "StationLatitude": "23.9806",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "花蓮港內",
+         "StationAddressEN": "Inside Hualien Harbor",
+         "County": {
+          "CountyName": "花蓮縣",
+          "CountyNameEN": "Hualien County"
+         },
+         "Town": {
+          "TownName": "花蓮市",
+          "TownNameEN": "Hualien City"
+         },
+         "Area": {
+          "AreaName": "花蓮沿海",
+          "AreaNameEN": "Hualien inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4W04",
+         "StationName": "吉貝潮位站",
+         "StationNameEN": "Jibei",
+         "StationLongitude": "119.6132",
+         "StationLatitude": "23.7386",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "吉貝碼頭，吉貝石滬文化館旁",
+         "StationAddressEN": "In the Jibei dock and beside the Jibei",
+         "County": {
+          "CountyName": "澎湖縣",
+          "CountyNameEN": "Penghu County"
+         },
+         "Town": {
+          "TownName": "白沙鄉",
+          "TownNameEN": "Baisha Township"
+         },
+         "Area": {
+          "AreaName": "澎湖海面",
+          "AreaNameEN": "Penghu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "13",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4J01",
+         "StationName": "萡子寮潮位站",
+         "StationNameEN": "Bozihlia",
+         "StationLongitude": "120.1349",
+         "StationLatitude": "23.6196",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "雲林萡子寮漁港",
+         "StationAddressEN": "Yunlin Boziliao Fishing Port",
+         "County": {
+          "CountyName": "雲林縣",
+          "CountyNameEN": "Yunlin County"
+         },
+         "Town": {
+          "TownName": "四湖鄉",
+          "TownNameEN": "Sihu Township"
+         },
+         "Area": {
+          "AreaName": "鹿港東石沿海",
+          "AreaNameEN": "Lugang-Dongshi inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4W02",
+         "StationName": "澎湖潮位站",
+         "StationNameEN": "Penghu",
+         "StationLongitude": "119.5782",
+         "StationLatitude": "23.5619",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "澎湖馬公港",
+         "StationAddressEN": "Magong Harbor in Penghu",
+         "County": {
+          "CountyName": "澎湖縣",
+          "CountyNameEN": "Penghu County"
+         },
+         "Town": {
+          "TownName": "馬公市",
+          "TownNameEN": "Magong City"
+         },
+         "Area": {
+          "AreaName": "澎湖海面",
+          "AreaNameEN": "Penghu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "10",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4L01",
+         "StationName": "塭港潮位站",
+         "StationNameEN": "Wungang",
+         "StationLongitude": "120.1225",
+         "StationLatitude": "23.4667",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "塭港村漁港近海1公里觀測樁",
+         "StationAddressEN": "Observatory Post at sea, 1km from Wengang Village Fishing Port",
+         "County": {
+          "CountyName": "嘉義縣",
+          "CountyNameEN": "Chiayi County"
+         },
+         "Town": {
+          "TownName": "東石鄉",
+          "TownNameEN": "Dongshi Township"
+         },
+         "Area": {
+          "AreaName": "東石安平沿海",
+          "AreaNameEN": "Dongshi-Anping inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4L02",
+         "StationName": "東石潮位站",
+         "StationNameEN": "Dongshih",
+         "StationLongitude": "120.1394",
+         "StationLatitude": "23.4500",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "嘉義東石漁港",
+         "StationAddressEN": "Dongshi Fishing Port in Chiayi",
+         "County": {
+          "CountyName": "嘉義縣",
+          "CountyNameEN": "Chiayi County"
+         },
+         "Town": {
+          "TownName": "東石鄉",
+          "TownNameEN": "Dongshi Township"
+         },
+         "Area": {
+          "AreaName": "東石安平沿海",
+          "AreaNameEN": "Dongshi-Anping inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4N01",
+         "StationName": "將軍潮位站",
+         "StationNameEN": "Jiangjun",
+         "StationLongitude": "120.0830",
+         "StationLatitude": "23.2116",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "臺南將軍漁港",
+         "StationAddressEN": "Tainan Jiangjun Fishing Port",
+         "County": {
+          "CountyName": "臺南市",
+          "CountyNameEN": "Tainan City"
+         },
+         "Town": {
+          "TownName": "將軍區",
+          "TownNameEN": "Jiangjun District"
+         },
+         "Area": {
+          "AreaName": "東石安平沿海",
+          "AreaNameEN": "Dongshi-Anping inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4W03",
+         "StationName": "七美潮位站",
+         "StationNameEN": "Cimei",
+         "StationLongitude": "119.4200",
+         "StationLatitude": "23.1900",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "七美漁港南防波堤，近紅燈塔",
+         "StationAddressEN": "Cimei Fishery Harbor in Penghu",
+         "County": {
+          "CountyName": "澎湖縣",
+          "CountyNameEN": "Penghu County"
+         },
+         "Town": {
+          "TownName": "七美鄉",
+          "TownNameEN": "Qimei Township"
+         },
+         "Area": {
+          "AreaName": "澎湖海面",
+          "AreaNameEN": "Penghu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4S02",
+         "StationName": "成功潮位站",
+         "StationNameEN": "Chenggong",
+         "StationLongitude": "121.3799",
+         "StationLatitude": "23.0972",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "臺東縣成功漁港",
+         "StationAddressEN": "Chenggong Fishing Port in Taitung County",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "成功鎮",
+          "TownNameEN": "Chenggong Township"
+         },
+         "Area": {
+          "AreaName": "成功大武沿海",
+          "AreaNameEN": "Chenggong Dawu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4Q02",
+         "StationName": "東港潮位站",
+         "StationNameEN": "Donggang",
+         "StationLongitude": "120.4383",
+         "StationLatitude": "22.4651",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "東港漁港",
+         "StationAddressEN": "Donggang Fishing Port",
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "東港鎮",
+          "TownNameEN": "Donggang Township"
+         },
+         "Area": {
+          "AreaName": "高雄枋寮沿海",
+          "AreaNameEN": "Kaohsiung-Fangliao inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4Q01",
+         "StationName": "小琉球潮位站",
+         "StationNameEN": "Xiao Liuqiu",
+         "StationLongitude": "120.3833",
+         "StationLatitude": "22.3533",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "屏東縣琉球鄉中福村白沙尾漁港(紅燈塔邊)",
+         "StationAddressEN": "Baishawei Fishing Port, Zhongfu Village, Liuqiu Township, Pingtung County (next to the Red Lighthouse)",
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "琉球鄉",
+          "TownNameEN": "Liuqiu Township"
+         },
+         "Area": {
+          "AreaName": "高雄枋寮沿海",
+          "AreaNameEN": "Kaohsiung-Fangliao inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4S01",
+         "StationName": "蘭嶼潮位站",
+         "StationNameEN": "Lanyu",
+         "StationLongitude": "121.5079",
+         "StationLatitude": "22.0577",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "蘭嶼開元漁港",
+         "StationAddressEN": "Kaiyuan Fishing Port in Lanyu",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "蘭嶼鄉",
+          "TownNameEN": "Lanyu Township"
+         },
+         "Area": {
+          "AreaName": "綠島蘭嶼海面",
+          "AreaNameEN": "Ludao-Lanyu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "7",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4Q03",
+         "StationName": "後壁湖潮位站",
+         "StationNameEN": "Houbihu",
+         "StationLongitude": "120.7453",
+         "StationLatitude": "21.9458",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "屏東縣恆春鎮後壁湖港海巡隊前方",
+         "StationAddressEN": "In front of the Maritime Patrol at Houbihu, Hengchun Township, Pingtung County",
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "恆春鎮",
+          "TownNameEN": "Hengchun Township"
+         },
+         "Area": {
+          "AreaName": "鵝鑾鼻沿海",
+          "AreaNameEN": "Eluanbi inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4P03",
+         "StationName": "南沙潮位站",
+         "StationNameEN": "Nansha Taiping Island",
+         "StationLongitude": "114.3603",
+         "StationLatitude": "10.3736",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "南沙太平島西港堤內側北端",
+         "StationAddressEN": "North Port Wharf at Taiping Island",
+         "County": {
+          "CountyName": "高雄市",
+          "CountyNameEN": "Kaohsiung City"
+         },
+         "Town": {
+          "TownName": "鹽埕區",
+          "TownNameEN": "Yancheng District"
+         },
+         "Area": {
+          "AreaName": "東沙及南沙海面",
+          "AreaNameEN": "Pratas and Spratly Sea State"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4W01",
+         "StationName": "馬祖潮位站",
+         "StationNameEN": "Matsu",
+         "StationLongitude": "119.9428",
+         "StationLatitude": "26.1617",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "福澳港",
+         "StationAddressEN": "Fu-ao Harbor",
+         "County": {
+          "CountyName": "連江縣",
+          "CountyNameEN": "Lienchiang County"
+         },
+         "Town": {
+          "TownName": "南竿鄉",
+          "TownNameEN": "Nangan Township"
+         },
+         "Area": {
+          "AreaName": "馬祖海面",
+          "AreaNameEN": "Matsu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "11",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4B03",
+         "StationName": "長潭里潮位站",
+         "StationNameEN": "ZhangTanLi",
+         "StationLongitude": "121.7998",
+         "StationLatitude": "25.1406",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "北寧路369巷(潮境公園內)",
+         "StationAddressEN": "Inside Chaojing Park",
+         "County": {
+          "CountyName": "基隆市",
+          "CountyNameEN": "Keelung City"
+         },
+         "Town": {
+          "TownName": "中正區",
+          "TownNameEN": "Zhongzheng District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4F01",
+         "StationName": "臺中港潮位站",
+         "StationNameEN": "Taichung Port",
+         "StationLongitude": "120.5331",
+         "StationLatitude": "24.2878",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "臺中港四號碼頭",
+         "StationAddressEN": "No.4 Wharf in Taichung Harbor",
+         "County": {
+          "CountyName": "臺中市",
+          "CountyNameEN": "Taichung City"
+         },
+         "Town": {
+          "TownName": "清水區",
+          "TownNameEN": "Qingshui District"
+         },
+         "Area": {
+          "AreaName": "新竹鹿港沿海",
+          "AreaNameEN": "Hsinchu-Lugang inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4P01",
+         "StationName": "高雄潮位站",
+         "StationNameEN": "Kaohsiung",
+         "StationLongitude": "120.2883",
+         "StationLatitude": "22.6144",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "高雄港",
+         "StationAddressEN": "Kaohsiung Harbor",
+         "County": {
+          "CountyName": "高雄市",
+          "CountyNameEN": "Kaohsiung City"
+         },
+         "Town": {
+          "TownName": "鼓山區",
+          "TownNameEN": "Gushan District"
+         },
+         "Area": {
+          "AreaName": "高雄枋寮沿海",
+          "AreaNameEN": "Kaohsiung-Fangliao inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4P02",
+         "StationName": "東沙潮位站",
+         "StationNameEN": "Dongshadao(Pratas)",
+         "StationLongitude": "116.6900",
+         "StationLatitude": "20.7000",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "東沙島內",
+         "StationAddressEN": "Inside Pratas Island",
+         "County": {
+          "CountyName": "高雄市",
+          "CountyNameEN": "Kaohsiung City"
+         },
+         "Town": {
+          "TownName": "鹽埕區",
+          "TownNameEN": "Yancheng District"
+         },
+         "Area": {
+          "AreaName": "東沙及南沙海面",
+          "AreaNameEN": "Pratas and Spratly Sea State"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1966",
+         "StationName": "水頭潮位站",
+         "StationNameEN": "Shueitou",
+         "StationLongitude": "118.2892",
+         "StationLatitude": "24.4211",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "金門縣后豐港海堤旁，水頭商港西防波堤堤頭",
+         "StationAddressEN": "Next to the seawall of Houfeng Port in Kinmen County, the west breakwater of Shuitou Commercial Port",
+         "County": {
+          "CountyName": "金門縣",
+          "CountyNameEN": "Kinmen County"
+         },
+         "Town": {
+          "TownName": "金城鎮",
+          "TownNameEN": "Jincheng Township"
+         },
+         "Area": {
+          "AreaName": "金門海面",
+          "AreaNameEN": "Kinmen inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1956",
+         "StationName": "料羅灣潮位站",
+         "StationNameEN": "Liaoluowan",
+         "StationLongitude": "118.4267",
+         "StationLatitude": "24.4075",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "金門縣新塘保護工旁，料羅港外港區新一號碼頭",
+         "StationAddressEN": "Next to the Xintang protection works in Kinmen County, the new No. 1 pier in Liaoluo Port's outer harbor area",
+         "County": {
+          "CountyName": "金門縣",
+          "CountyNameEN": "Kinmen County"
+         },
+         "Town": {
+          "TownName": "金湖鎮",
+          "TownNameEN": "Jinhu Township"
+         },
+         "Area": {
+          "AreaName": "金門海面",
+          "AreaNameEN": "Kinmen inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1456",
+         "StationName": "麥寮潮位站",
+         "StationNameEN": "Mailiao",
+         "StationLongitude": "120.1606",
+         "StationLatitude": "23.7861",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "雲林縣新興海堤及後安寮海堤外側，臺塑六輕麥寮專用港西防波堤",
+         "StationAddressEN": "Outside the Xinxing Seawall and Houanliao Seawall in Yunlin County, and the Port West Breakwater for the Formosa Plastics Group’s No. 6 Light Industry Plant",
+         "County": {
+          "CountyName": "雲林縣",
+          "CountyNameEN": "Yunlin County"
+         },
+         "Town": {
+          "TownName": "麥寮鄉",
+          "TownNameEN": "Mailiao Township"
+         },
+         "Area": {
+          "AreaName": "鹿港東石沿海",
+          "AreaNameEN": "Lugang-Dongshi inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1566",
+         "StationName": "石梯潮位站",
+         "StationNameEN": "Shihti",
+         "StationLongitude": "121.5061",
+         "StationLatitude": "23.4947",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "花蓮縣靜浦南段海堤北側，石梯漁港東外突堤碼頭",
+         "StationAddressEN": "North side of the seawall in the southern section of Jingpu, Hualien County, East Outer Jetty Pier of Shiti Fishing Port",
+         "County": {
+          "CountyName": "花蓮縣",
+          "CountyNameEN": "Hualien County"
+         },
+         "Town": {
+          "TownName": "豐濱鄉",
+          "TownNameEN": "Fengbin Township"
+         },
+         "Area": {
+          "AreaName": "花蓮沿海",
+          "AreaNameEN": "Hualien inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "11781",
+         "StationName": "四草潮位站",
+         "StationNameEN": "Sicao",
+         "StationLongitude": "120.1117",
+         "StationLatitude": "23.0236",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "臺南市四草海堤北側，鹿耳門溪口四草四五堡漁港萬安橋下",
+         "StationAddressEN": "North side of Sicao Seawall, Tainan City, under Wan&#039;an Bridge at Sicao Siwubao Fishing Port at the mouth of Luermen River",
+         "County": {
+          "CountyName": "臺南市",
+          "CountyNameEN": "Tainan City"
+         },
+         "Town": {
+          "TownName": "安南區",
+          "TownNameEN": "Annan District"
+         },
+         "Area": {
+          "AreaName": "安平高雄沿海",
+          "AreaNameEN": "Anping-Kaohsiung inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1786",
+         "StationName": "永安潮位站",
+         "StationNameEN": "Yongan",
+         "StationLongitude": "120.1975",
+         "StationLatitude": "22.8189",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "高雄市新港海堤外側，永安中油LNG港防波堤頭",
+         "StationAddressEN": "Outside of the New Port Seawall in Kaohsiung City, the breakwater head of the Yongan CPC LNG Port",
+         "County": {
+          "CountyName": "高雄市",
+          "CountyNameEN": "Kaohsiung City"
+         },
+         "Town": {
+          "TownName": "永安區",
+          "TownNameEN": "Yongan District"
+         },
+         "Area": {
+          "AreaName": "安平高雄沿海",
+          "AreaNameEN": "Anping-Kaohsiung inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1586",
+         "StationName": "富岡潮位站",
+         "StationNameEN": "Fugang",
+         "StationLongitude": "121.1915",
+         "StationLatitude": "22.7904",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "臺東縣富岡二號海堤旁之富岡漁港南岸碼頭",
+         "StationAddressEN": "Fugang Fishing Port South Shore Pier beside Fugang No. 2 Seawall, Taitung County",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "臺東市",
+          "TownNameEN": "Taitung City"
+         },
+         "Area": {
+          "AreaName": "成功大武沿海",
+          "AreaNameEN": "Chenggong Dawu inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1676",
+         "StationName": "綠島潮位站",
+         "StationNameEN": "Lyudao",
+         "StationLongitude": "121.4731",
+         "StationLatitude": "22.6606",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "綠島南寮二號海堤南側，南寮漁港北岸碼頭",
+         "StationAddressEN": "South side of Green Island Nanliao No. 2 Seawall, North Shore Pier of Nanliao Fishing Port",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "綠島鄉",
+          "TownNameEN": "Lvdao Township"
+         },
+         "Area": {
+          "AreaName": "綠島蘭嶼海面",
+          "AreaNameEN": "Ludao-Lanyu inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1596",
+         "StationName": "大武潮位站",
+         "StationNameEN": "Dawn",
+         "StationLongitude": "120.8972",
+         "StationLatitude": "22.3375",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "臺東縣大武海岸保護工南側，大武漁港南側防波堤",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "大武鄉",
+          "TownNameEN": "Dawu Township"
+         },
+         "Area": {
+          "AreaName": "成功大武沿海",
+          "AreaNameEN": "Chenggong Dawu inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "1496",
+         "StationName": "蟳廣嘴潮位站",
+         "StationNameEN": "Syunguangzuei",
+         "StationLongitude": "120.7119",
+         "StationLatitude": "21.9858",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "屏東縣四重溪出海口南側，山海漁港南岸碼頭",
+         "StationAddressEN": "South side of the Sichong River estuary in Pingtung County, South Bank Pier of Shanhai Fishing Port",
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "恆春鎮",
+          "TownNameEN": "Hengchun Township"
+         },
+         "Area": {
+          "AreaName": "枋寮恆春沿海",
+          "AreaNameEN": "Fangliao-Hengchun inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "12540",
+         "StationName": "和平港潮位站",
+         "StationNameEN": "Heping Port",
+         "StationLongitude": "121.7561",
+         "StationLatitude": "24.3031",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "和平港工業區專用港南側碼頭",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "花蓮縣",
+          "CountyNameEN": "Hualien County"
+         },
+         "Town": {
+          "TownName": "秀林鄉",
+          "TownNameEN": "Xiulin Township"
+         },
+         "Area": {
+          "AreaName": "花蓮沿海",
+          "AreaNameEN": "Hualien inshore"
+         },
+         "StationChargeIns": "工業技術研究院",
+         "StationChargeInsEN": "Industrial Technology Research Institute"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46699A",
+         "StationName": "花蓮資料浮標",
+         "StationNameEN": "Hualien Buoy",
+         "StationLongitude": "121.6319",
+         "StationLatitude": "24.0319",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "位於七星潭外海離岸約0.3公里處，該處水深約22公尺",
+         "StationAddressEN": "Located about 0.3 km offshore from Qixingtan, the water depth is about 22 meters.",
+         "County": {
+          "CountyName": "花蓮縣",
+          "CountyNameEN": "Hualien County"
+         },
+         "Town": {
+          "TownName": "新城鄉",
+          "TownNameEN": "Xincheng Township"
+         },
+         "Area": {
+          "AreaName": "花蓮沿海",
+          "AreaNameEN": "Hualien inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "9",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46757B",
+         "StationName": "新竹資料浮標",
+         "StationNameEN": "Hsinchu Buoy",
+         "StationLongitude": "120.8447",
+         "StationLatitude": "24.7633",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "海山漁港外海，離岸約6.4公里，該處水深約22公尺",
+         "StationAddressEN": "At sea, about 6.4 km from Haishan Fishing Port, with water depth of about 22m",
+         "County": {
+          "CountyName": "新竹市",
+          "CountyNameEN": "Hsinchu City"
+         },
+         "Town": {
+          "TownName": "香山區",
+          "TownNameEN": "Xiangshan District"
+         },
+         "Area": {
+          "AreaName": "新竹鹿港沿海",
+          "AreaNameEN": "Hsinchu-Lugang inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46694A",
+         "StationName": "龍洞資料浮標",
+         "StationNameEN": "Longdong Buoy",
+         "StationLongitude": "121.9225",
+         "StationLatitude": "25.0986",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "龍洞遊艇港外海，離岸約0.5公里，該處水深約27公尺",
+         "StationAddressEN": "At sea, about 0.5km from Longdong Boat Harbor, with water depth of about 27m",
+         "County": {
+          "CountyName": "新北市",
+          "CountyNameEN": "New Taipei City"
+         },
+         "Town": {
+          "TownName": "貢寮區",
+          "TownNameEN": "Gongliao District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "2",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46714D",
+         "StationName": "小琉球資料浮標",
+         "StationNameEN": "Xiao Liuqiu Buoy",
+         "StationLongitude": "120.3781",
+         "StationLatitude": "22.3172",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "小琉球大福漁港外海南南東方約2公里，該處水深約100公尺",
+         "StationAddressEN": "It is about 2 kilometers south-southeast of Xiaoliuqiu Dafu Fishing Port, and the water depth there is about 100 meters.",
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "琉球鄉",
+          "TownNameEN": "Liuqiu Township"
+         },
+         "Area": {
+          "AreaName": "枋寮恆春沿海",
+          "AreaNameEN": "Fangliao-Hengchun inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6V27",
+         "StationName": "東沙島資料浮標",
+         "StationNameEN": "Pratas Buoy",
+         "StationLongitude": "118.8350",
+         "StationLatitude": "21.0867",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "距高雄港西南方約225公里，該處水深2687公尺，迴轉半徑2.5公里",
+         "StationAddressEN": "225 kilometers away from southwest of Kaohsiung Port, Taiwan, with a water depth of about 2687 m, and radius of gyration 2.5km.",
+         "County": {
+          "CountyName": "高雄市",
+          "CountyNameEN": "Kaohsiung City"
+         },
+         "Town": {
+          "TownName": "旗津區",
+          "TownNameEN": "Qijin District"
+         },
+         "Area": {
+          "AreaName": "東沙及南沙海面",
+          "AreaNameEN": "Pratas and Spratly Sea State"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "15",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6W08",
+         "StationName": "馬祖資料浮標",
+         "StationNameEN": "Matsu Buoy",
+         "StationLongitude": "120.5136",
+         "StationLatitude": "26.3553",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "連江縣東引島東南方約3公里，該處水深約53公尺",
+         "StationAddressEN": "at 3 km Southeast of Dongyin Island, Lienchiang County, with a water depth of about 53m",
+         "County": {
+          "CountyName": "連江縣",
+          "CountyNameEN": "Lienchiang County"
+         },
+         "Town": {
+          "TownName": "東引鄉",
+          "TownNameEN": "Dongyin Township"
+         },
+         "Area": {
+          "AreaName": "馬祖海面",
+          "AreaNameEN": "Matsu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6W10",
+         "StationName": "七美資料浮標",
+         "StationNameEN": "Qimei Buoy",
+         "StationLongitude": "119.6538",
+         "StationLatitude": "23.1911",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "澎湖縣七美嶼東方22公里，布放水深50公尺。",
+         "StationAddressEN": "at 22m east of Qimei Township, Penghu County , with a water depth of about 50 m",
+         "County": {
+          "CountyName": "澎湖縣",
+          "CountyNameEN": "Penghu County"
+         },
+         "Town": {
+          "TownName": "望安鄉",
+          "TownNameEN": "Wangan Township"
+         },
+         "Area": {
+          "AreaName": "澎湖海面",
+          "AreaNameEN": "Penghu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "12",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6AH2",
+         "StationName": "富貴角資料浮標",
+         "StationNameEN": "Fugui Cape Buoy",
+         "StationLongitude": "121.5311",
+         "StationLatitude": "25.3036",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "新北市石門區富貴角西北方0.8公里，水深30公尺",
+         "StationAddressEN": "0.8 km northwest of Fugui Cape away, with 30m depth.",
+         "County": {
+          "CountyName": "新北市",
+          "CountyNameEN": "New Taipei City"
+         },
+         "Town": {
+          "TownName": "石門區",
+          "TownNameEN": "Shimen District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "3",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46708A",
+         "StationName": "龜山島資料浮標",
+         "StationNameEN": "Guishandao Buoy",
+         "StationLongitude": "121.9267",
+         "StationLatitude": "24.8469",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "龜山島龜尾端西方0.8公里，該處水深約16.9公尺",
+         "StationAddressEN": "Located 0.8 kilometers western of Guishandao, with water depth of about 16.9 m.",
+         "County": {
+          "CountyName": "宜蘭縣",
+          "CountyNameEN": "Yilan County"
+         },
+         "Town": {
+          "TownName": "頭城鎮",
+          "TownNameEN": "Toucheng Township"
+         },
+         "Area": {
+          "AreaName": "宜蘭蘇澳沿海",
+          "AreaNameEN": "Yilan-Su-ao inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "5",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46706A",
+         "StationName": "蘇澳資料浮標",
+         "StationNameEN": "Su-ao Buoy",
+         "StationLongitude": "121.8758",
+         "StationLatitude": "24.6247",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "距蘇澳港北方約5公里，水深約23公尺",
+         "StationAddressEN": "About 5m north of Su-ao Harbor, with water depth of about 23m",
+         "County": {
+          "CountyName": "宜蘭縣",
+          "CountyNameEN": "Yilan County"
+         },
+         "Town": {
+          "TownName": "蘇澳鎮",
+          "TownNameEN": "Suao Township"
+         },
+         "Area": {
+          "AreaName": "宜蘭蘇澳沿海",
+          "AreaNameEN": "Yilan-Su-ao inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46759A",
+         "StationName": "鵝鑾鼻資料浮標",
+         "StationNameEN": "Eluanbi Buoy",
+         "StationLongitude": "120.8108",
+         "StationLatitude": "21.9164",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "墾丁鵝鑾鼻香蕉灣南方外海約3公里，該處水深約40公尺",
+         "StationAddressEN": "At sea, about 3km south of Eluanbi Banana Bay in Kenting, with water depth of about 40m",
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "恆春鎮",
+          "TownNameEN": "Hengchun Township"
+         },
+         "Area": {
+          "AreaName": "鵝鑾鼻沿海",
+          "AreaNameEN": "Eluanbi inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46787A",
+         "StationName": "金門資料浮標",
+         "StationNameEN": "Kinmen Buoy",
+         "StationLongitude": "118.4235",
+         "StationLatitude": "24.3724",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "料羅港南方海域約4公里，該處水深25公尺",
+         "StationAddressEN": "At sea in the area about 4km south of Liaoluowan Harbor, with a depth of 25m",
+         "County": {
+          "CountyName": "金門縣",
+          "CountyNameEN": "Kinmen County"
+         },
+         "Town": {
+          "TownName": "金湖鎮",
+          "TownNameEN": "Jinhu Township"
+         },
+         "Area": {
+          "AreaName": "金門海面",
+          "AreaNameEN": "Kinmen inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46778A",
+         "StationName": "七股資料浮標",
+         "StationNameEN": "Qigu Buoy",
+         "StationLongitude": "120.0075",
+         "StationLatitude": "23.0950",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "頂頭額沙洲外海約2.5公里，該處水深約18公尺",
+         "StationAddressEN": "At sea, about 2.5km from Dingtoue Sandbank, with water depth of about 18m",
+         "County": {
+          "CountyName": "臺南市",
+          "CountyNameEN": "Tainan City"
+         },
+         "Town": {
+          "TownName": "七股區",
+          "TownNameEN": "Qigu District"
+         },
+         "Area": {
+          "AreaName": "東石安平沿海",
+          "AreaNameEN": "Dongshi-Anping inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "46735A",
+         "StationName": "澎湖資料浮標",
+         "StationNameEN": "Penghu Buoy",
+         "StationLongitude": "119.5519",
+         "StationLatitude": "23.7267",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "姑婆嶼北北西方約1公里處,該處水深26公尺",
+         "StationAddressEN": "At sea, about 1km outside Beihai Niaoyu Village, with a depth of about 26m",
+         "County": {
+          "CountyName": "澎湖縣",
+          "CountyNameEN": "Penghu County"
+         },
+         "Town": {
+          "TownName": "白沙鄉",
+          "TownNameEN": "Baisha Township"
+         },
+         "Area": {
+          "AreaName": "澎湖海面",
+          "AreaNameEN": "Penghu inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "WRA007",
+         "StationName": "臺東資料浮標",
+         "StationNameEN": "Taitung Buoy",
+         "StationLongitude": "121.1400",
+         "StationLatitude": "22.7222",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "臺東焚化爐外1公里處，該處水深約30公尺",
+         "StationAddressEN": "at 1 km Southeast of TaiTung BOO Incineration Plant, with a water depth of about 30m",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "臺東市",
+          "TownNameEN": "Taitung City"
+         },
+         "Area": {
+          "AreaName": "成功大武沿海",
+          "AreaNameEN": "Chenggong Dawu inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "COMC08",
+         "StationName": "彌陀資料浮標",
+         "StationNameEN": "Mituo Buoy",
+         "StationLongitude": "120.1636",
+         "StationLatitude": "22.7636",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "高雄市彌陀區外海，該處水深23公尺",
+         "StationAddressEN": "At sea, near Kaohsiung City Mituo District, with a depth of 23m",
+         "County": {
+          "CountyName": "高雄市",
+          "CountyNameEN": "Kaohsiung City"
+         },
+         "Town": {
+          "TownName": "彌陀區",
+          "TownNameEN": "Mituo District"
+         },
+         "Area": {
+          "AreaName": "安平高雄沿海",
+          "AreaNameEN": "Anping-Kaohsiung inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "2"
+          },
+          "WindScale": {
+           "ObsStatus": "2"
+          },
+          "WindDirection": {
+           "ObsStatus": "2"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "2"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "2"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "2"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6S94",
+         "StationName": "蘭嶼資料浮標",
+         "StationNameEN": "Lanyu Buoy",
+         "StationLongitude": "121.5803",
+         "StationLatitude": "22.0706",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "蘭嶼軍艦岩南方約0.9公里，水深50公尺",
+         "StationAddressEN": "The Lanyu warship rock is 0.9 kilometers south, with a water depth of 50 meters",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "蘭嶼鄉",
+          "TownNameEN": "Lanyu Township"
+         },
+         "Area": {
+          "AreaName": "綠島蘭嶼海面",
+          "AreaNameEN": "Ludao-Lanyu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "8",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "4Q11",
+         "StationName": "大鵬灣",
+         "StationNameEN": "Dapeng Bay",
+         "StationLongitude": "120.4478",
+         "StationLatitude": "22.4494",
+         "StationAttribute": "氣象站",
+         "StationAttributeEN": "Meteorological Station",
+         "StationAddress": "大鵬灣安檢所河堤上觀測崗哨旁",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "東港鎮",
+          "TownNameEN": "Donggang Township"
+         },
+         "Area": {
+          "AreaName": "高雄枋寮沿海",
+          "AreaNameEN": "Kaohsiung-Fangliao inshore"
+         },
+         "StationChargeIns": "交通部觀光署大鵬灣國家風景區管理處",
+         "StationChargeInsEN": "Dapeng Bay National Scenic Area Headquarters, Tourism Administration, Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WindSpeed,WindScale,WindDirection,WindDirectionDescription,Temperature,StationPressure",
+         "ObservedProperties": {
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "4J21",
+         "StationName": "麥寮",
+         "StationNameEN": "Mailiao",
+         "StationLongitude": "120.1603",
+         "StationLatitude": "23.7861",
+         "StationAttribute": "氣象站",
+         "StationAttributeEN": "Meteorological Station",
+         "StationAddress": "雲林縣新興海堤及後安寮海堤外側，臺塑六輕麥寮專用港西防波堤",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "雲林縣",
+          "CountyNameEN": "Yunlin County"
+         },
+         "Town": {
+          "TownName": "麥寮鄉",
+          "TownNameEN": "Mailiao Township"
+         },
+         "Area": {
+          "AreaName": "鹿港東石沿海",
+          "AreaNameEN": "Lugang-Dongshi inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WindSpeed,WindScale,WindDirection,WindDirectionDescription,Temperature,StationPressure",
+         "ObservedProperties": {
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "4T21",
+         "StationName": "石梯",
+         "StationNameEN": "Shihti",
+         "StationLongitude": "121.5061",
+         "StationLatitude": "23.4947",
+         "StationAttribute": "氣象站",
+         "StationAttributeEN": "Meteorological Station",
+         "StationAddress": "花蓮縣靜浦南段海堤北側，石梯漁港東外突堤碼頭",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "花蓮縣",
+          "CountyNameEN": "Hualien County"
+         },
+         "Town": {
+          "TownName": "豐濱鄉",
+          "TownNameEN": "Fengbin Township"
+         },
+         "Area": {
+          "AreaName": "花蓮沿海",
+          "AreaNameEN": "Hualien inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WindSpeed,WindScale,WindDirection,WindDirectionDescription,StationPressure",
+         "ObservedProperties": {
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "4S21",
+         "StationName": "綠島",
+         "StationNameEN": "Lyudao",
+         "StationLongitude": "121.4730",
+         "StationLatitude": "22.6606",
+         "StationAttribute": "氣象站",
+         "StationAttributeEN": "Meteorological Station",
+         "StationAddress": "綠島南寮二號海堤南側，南寮漁港北岸碼頭",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "綠島鄉",
+          "TownNameEN": "Lvdao Township"
+         },
+         "Area": {
+          "AreaName": "綠島蘭嶼海面",
+          "AreaNameEN": "Ludao-Lanyu inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WindSpeed,WindScale,WindDirection,WindDirectionDescription,StationPressure",
+         "ObservedProperties": {
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "4W21",
+         "StationName": "料羅灣",
+         "StationNameEN": "Liaoluowan",
+         "StationLongitude": "118.4267",
+         "StationLatitude": "24.4075",
+         "StationAttribute": "氣象站",
+         "StationAttributeEN": "Meteorological Station",
+         "StationAddress": "金門縣新塘保護工旁，料羅港外港區新一號碼頭",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "金門縣",
+          "CountyNameEN": "Kinmen County"
+         },
+         "Town": {
+          "TownName": "金湖鎮",
+          "TownNameEN": "Jinhu Township"
+         },
+         "Area": {
+          "AreaName": "金門海面",
+          "AreaNameEN": "Kinmen inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WindSpeed,WindScale,WindDirection,WindDirectionDescription,StationPressure",
+         "ObservedProperties": {
+          "WindSpeed": {
+           "ObsStatus": "2"
+          },
+          "WindScale": {
+           "ObsStatus": "2"
+          },
+          "WindDirection": {
+           "ObsStatus": "2"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "2"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "4I",
+         "StationName": "小港潮位站",
+         "StationNameEN": "Xiaogang",
+         "StationLongitude": "121.4036",
+         "StationLatitude": "23.1589",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "臺東縣三仙海堤北側，小崗漁港內防波堤",
+         "StationAddressEN": "North side of Sanxian Seawall, Taitung County, breakwater inside Xiaogang Fishing Port",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "成功鎮",
+          "TownNameEN": "Chenggong Township"
+         },
+         "Area": {
+          "AreaName": "成功大武沿海",
+          "AreaNameEN": "Chenggong Dawu inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6B01",
+         "StationName": "彭佳嶼資料浮標",
+         "StationNameEN": "Pengjiayu Buoy",
+         "StationLongitude": "122.0692",
+         "StationLatitude": "25.6200",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "距彭佳嶼西南方0.9公里，水深51公尺",
+         "StationAddressEN": "at 0.9 km southwest of Pengjiayu, with a water depth of about 51m",
+         "County": {
+          "CountyName": "基隆市",
+          "CountyNameEN": "Keelung City"
+         },
+         "Town": {
+          "TownName": "中正區",
+          "TownNameEN": "Zhongzheng District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "16",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "1"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "1"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "1"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "1"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6F01",
+         "StationName": "臺中資料浮標",
+         "StationNameEN": "Taichung Buoy",
+         "StationLongitude": "120.4144",
+         "StationLatitude": "24.2375",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "距臺中港西方海域約6公里，水深約20公尺。",
+         "StationAddressEN": "At sea, 6 km away from the west of Taichung Harbor are about 20 meters deep.",
+         "County": {
+          "CountyName": "臺中市",
+          "CountyNameEN": "Taichung City"
+         },
+         "Town": {
+          "TownName": "梧棲區",
+          "TownNameEN": "Wuqi District"
+         },
+         "Area": {
+          "AreaName": "新竹鹿港沿海",
+          "AreaNameEN": "Hsinchu-Lugang inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "14",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "0"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4W05",
+         "StationName": "東吉潮位站",
+         "StationNameEN": "Dongjidao",
+         "StationLongitude": "119.6678",
+         "StationLatitude": "23.2546",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "澎湖縣望安鄉東吉村東吉漁港",
+         "StationAddressEN": "Dongji Village Dongji Fishing Port",
+         "County": {
+          "CountyName": "澎湖縣",
+          "CountyNameEN": "Penghu County"
+         },
+         "Town": {
+          "TownName": "望安鄉",
+          "TownNameEN": "Wangan Township"
+         },
+         "Area": {
+          "AreaName": "澎湖海面",
+          "AreaNameEN": "Penghu inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "NTU01",
+         "StationName": "NTU01浮標",
+         "StationNameEN": "NTU01  Buoy",
+         "StationLongitude": "123.9000",
+         "StationLatitude": "21.2000",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "距台東市東南方約340公里海面上",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "蘭嶼鄉",
+          "TownNameEN": "Lanyu Township"
+         },
+         "Area": {
+          "AreaName": "綠島蘭嶼海面",
+          "AreaNameEN": "Ludao-Lanyu inshore"
+         },
+         "StationChargeIns": "國立臺灣大學",
+         "StationChargeInsEN": "National Taiwan University"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "0"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "NTU02",
+         "StationName": "NTU02浮標",
+         "StationNameEN": "NTU02  Buoy",
+         "StationLongitude": "122.6000",
+         "StationLatitude": "21.8000",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "距台東市東南方約175公里海面上",
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "蘭嶼鄉",
+          "TownNameEN": "Lanyu Township"
+         },
+         "Area": {
+          "AreaName": "綠島蘭嶼海面",
+          "AreaNameEN": "Ludao-Lanyu inshore"
+         },
+         "StationChargeIns": "國立臺灣大學",
+         "StationChargeInsEN": "National Taiwan University"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "0"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "OAC004",
+         "StationName": "潮境浮標",
+         "StationNameEN": "Chaojing Buoy",
+         "StationLongitude": "121.8080",
+         "StationLatitude": "25.1441",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": null,
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "基隆市",
+          "CountyNameEN": "Keelung City"
+         },
+         "Town": {
+          "TownName": "中正區",
+          "TownNameEN": "Zhongzheng District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "國家海洋研究院",
+         "StationChargeInsEN": "National Academy of Marine Research"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "OAC003",
+         "StationName": "鼻頭角浮標",
+         "StationNameEN": "BiTouCape Buoy",
+         "StationLongitude": "121.9073",
+         "StationLatitude": "25.1247",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": null,
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "新北市",
+          "CountyNameEN": "New Taipei City"
+         },
+         "Town": {
+          "TownName": "瑞芳區",
+          "TownNameEN": "Ruifang District"
+         },
+         "Area": {
+          "AreaName": "彭佳嶼基隆海面",
+          "AreaNameEN": "Pengjiayu-Keelung inshore"
+         },
+         "StationChargeIns": "國家海洋研究院",
+         "StationChargeInsEN": "National Academy of Marine Research"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "0"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "OAC005",
+         "StationName": "蜜月灣浮標",
+         "StationNameEN": "HoneymoonBend Buoy",
+         "StationLongitude": "121.9291",
+         "StationLatitude": "24.9488",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": null,
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "宜蘭縣",
+          "CountyNameEN": "Yilan County"
+         },
+         "Town": {
+          "TownName": "頭城鎮",
+          "TownNameEN": "Toucheng Township"
+         },
+         "Area": {
+          "AreaName": "宜蘭蘇澳沿海",
+          "AreaNameEN": "Yilan-Su-ao inshore"
+         },
+         "StationChargeIns": "國家海洋研究院",
+         "StationChargeInsEN": "National Academy of Marine Research"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "0"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "OAC007",
+         "StationName": "南灣浮標",
+         "StationNameEN": "Nanwan Buoy",
+         "StationLongitude": "120.7600",
+         "StationLatitude": "21.9450",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": null,
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "恆春鎮",
+          "TownNameEN": "Hengchun Township"
+         },
+         "Area": {
+          "AreaName": "鵝鑾鼻沿海",
+          "AreaNameEN": "Eluanbi inshore"
+         },
+         "StationChargeIns": "國家海洋研究院",
+         "StationChargeInsEN": "National Academy of Marine Research"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "OAC006",
+         "StationName": "東吉嶼浮標",
+         "StationNameEN": "Dongjiyu Buoy",
+         "StationLongitude": "119.6486",
+         "StationLatitude": "23.2361",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": null,
+         "StationAddressEN": null,
+         "County": {
+          "CountyName": "澎湖縣",
+          "CountyNameEN": "Penghu County"
+         },
+         "Town": {
+          "TownName": "望安鄉",
+          "TownNameEN": "Wangan Township"
+         },
+         "Area": {
+          "AreaName": "澎湖海面",
+          "AreaNameEN": "Penghu inshore"
+         },
+         "StationChargeIns": "國家海洋研究院",
+         "StationChargeInsEN": "National Academy of Marine Research"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "1"
+          },
+          "WindScale": {
+           "ObsStatus": "1"
+          },
+          "WindDirection": {
+           "ObsStatus": "1"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "1"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "4A",
+         "StationName": "安平潮位站",
+         "StationNameEN": "Anping",
+         "StationLongitude": "120.1497",
+         "StationLatitude": "22.9883",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "位於安平漁港航道北側，在安平漁港安檢所之附近",
+         "StationAddressEN": "Located on the north side of the Anping Fishing Port channel, near the Anping Fishing Port Security Inspection Office",
+         "County": {
+          "CountyName": "臺南市",
+          "CountyNameEN": "Tainan City"
+         },
+         "Town": {
+          "TownName": "安平區",
+          "TownNameEN": "Anping District"
+         },
+         "Area": {
+          "AreaName": "東石安平沿海",
+          "AreaNameEN": "Dongshi-Anping inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C4P09",
+         "StationName": "東沙潮位站",
+         "StationNameEN": "Dongshadao(Pratas)",
+         "StationLongitude": "116.7289",
+         "StationLatitude": "20.6977",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "東沙島內",
+         "StationAddressEN": "Inside Pratas Island",
+         "County": {
+          "CountyName": "高雄市",
+          "CountyNameEN": "Kaohsiung City"
+         },
+         "Town": {
+          "TownName": "鼓山區",
+          "TownNameEN": "Gushan District"
+         },
+         "Area": {
+          "AreaName": "東沙及南沙海面",
+          "AreaNameEN": "Pratas and Spratly Sea State"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "4F",
+         "StationName": "枋寮潮位站",
+         "StationNameEN": "Fangliao",
+         "StationLongitude": "120.5931",
+         "StationLatitude": "22.3636",
+         "StationAttribute": "潮位站",
+         "StationAttributeEN": "Tidal Station",
+         "StationAddress": "屏東縣枋寮鄉枋寮漁水港，枋寮漁港安檢所附近",
+         "StationAddressEN": "Fangliao Fishing Port, Fangliao Township, Pingtung County, near Fangliao Fishing Port Security Checkpoint.",
+         "County": {
+          "CountyName": "屏東縣",
+          "CountyNameEN": "Pingtung County"
+         },
+         "Town": {
+          "TownName": "枋寮鄉",
+          "TownNameEN": "Fangliao Township"
+         },
+         "Area": {
+          "AreaName": "枋寮恆春沿海",
+          "AreaNameEN": "Fangliao-Hengchun inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "TideHeight,TideLevel",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "WRA005",
+         "StationName": "外傘頂資料浮標",
+         "StationNameEN": "Waisanding",
+         "StationLongitude": "120.0592",
+         "StationLatitude": "23.6792",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "雲林縣台西漁港外約12公里，水深24公尺處",
+         "StationAddressEN": "About 12 kilometers outside Taixi Fishing Port, Yunlin County, at a water depth of 24 meters.",
+         "County": {
+          "CountyName": "雲林縣",
+          "CountyNameEN": "Yunlin County"
+         },
+         "Town": {
+          "TownName": "四湖鄉",
+          "TownNameEN": "Sihu Township"
+         },
+         "Area": {
+          "AreaName": "鹿港東石沿海",
+          "AreaNameEN": "Lugang-Dongshi inshore"
+         },
+         "StationChargeIns": "經濟部水利署",
+         "StationChargeInsEN": "Water Resources Agency of Ministry of Economic Affairs"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "0"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6D01",
+         "StationName": "新竹水位浮標",
+         "StationNameEN": "Hsinchu water level buoy",
+         "StationLongitude": "120.8689",
+         "StationLatitude": "24.7561",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "海山漁港外海，離岸約4公里處，該處水深約13公尺",
+         "StationAddressEN": "At sea, about 4 km from Haishan Fishing Port, with water depth of about 13 m.",
+         "County": {
+          "CountyName": "新竹市",
+          "CountyNameEN": "Hsinchu City"
+         },
+         "Town": {
+          "TownName": "香山區",
+          "TownNameEN": "Xiangshan District"
+         },
+         "Area": {
+          "AreaName": "新竹鹿港沿海",
+          "AreaNameEN": "Hsinchu-Lugang inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6N01",
+         "StationName": "臺南水位浮標",
+         "StationNameEN": "Tainan water level buoy",
+         "StationLongitude": "120.1369",
+         "StationLatitude": "22.9774",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "位於安平漁港南堤燈塔西南西方外海約1公里處，水深12公尺，迴轉半徑32公尺",
+         "StationAddressEN": "Located about 1 km southwest of the Anping Fishing Port Nandi Lighthouse, the water depth is 12 meters and the turning radius is 32 meters.",
+         "County": {
+          "CountyName": "臺南市",
+          "CountyNameEN": "Tainan City"
+         },
+         "Town": {
+          "TownName": "安平區",
+          "TownNameEN": "Anping District"
+         },
+         "Area": {
+          "AreaName": "東石安平沿海",
+          "AreaNameEN": "Dongshi-Anping inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "C6G01",
+         "StationName": "彰化水位浮標",
+         "StationNameEN": "Changhua Water Level Buoy",
+         "StationLongitude": "120.3256",
+         "StationLatitude": "24.0955",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "位於彰化彰濱工業區北側洋仔厝溪排水幹線出海口往西約5.6公里，水深約18.4公尺",
+         "StationAddressEN": "Located about 5.6 kilometers west of the Yangzaicuo River drainage main outlet on the north side of the Changbin Industrial Park in Changhua City, with a water depth of about 18.4 meters.",
+         "County": {
+          "CountyName": "彰化縣",
+          "CountyNameEN": "Changhua County"
+         },
+         "Town": {
+          "TownName": "鹿港鎮",
+          "TownNameEN": "Lugang Township"
+         },
+         "Area": {
+          "AreaName": "鹿港東石沿海",
+          "AreaNameEN": "Lugang-Dongshi inshore"
+         },
+         "StationChargeIns": "交通部中央氣象署",
+         "StationChargeInsEN": "Central Weather Administration  Ministry of Transportation and Communications"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "1",
+         "ObservedPropertyNames": "TideHeight,TideLevel,WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,SeaTemperature",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "1"
+          },
+          "TideLevel": {
+           "ObsStatus": "1"
+          },
+          "WaveHeight": {
+           "ObsStatus": "1"
+          },
+          "WaveDirection": {
+           "ObsStatus": "1"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "1"
+          },
+          "WavePeriod": {
+           "ObsStatus": "1"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "1"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       },
+       {
+        "Station": {
+         "StationID": "A6S01",
+         "StationName": "綠島公館資料浮標",
+         "StationNameEN": "Green Island Gungguan Buoy",
+         "StationLongitude": "121.4970",
+         "StationLatitude": "22.6877",
+         "StationAttribute": "浮標站",
+         "StationAttributeEN": "Data Buoy Station",
+         "StationAddress": "臺東縣綠島鄉公館漁港東北方1.6公里，水深45公尺",
+         "StationAddressEN": "1.6 km northeast of Gongguan Fishing Port in Lvdao Township, Taitung County, with a water depth of 45 meters",
+         "County": {
+          "CountyName": "臺東縣",
+          "CountyNameEN": "Taitung County"
+         },
+         "Town": {
+          "TownName": "綠島鄉",
+          "TownNameEN": "Lvdao Township"
+         },
+         "Area": {
+          "AreaName": "綠島蘭嶼海面",
+          "AreaNameEN": "Ludao-Lanyu inshore"
+         },
+         "StationChargeIns": "中央研究院生物多樣性研究中心",
+         "StationChargeInsEN": "Biodiversity Research Center, Academia Sinica"
+        },
+        "Description": null,
+        "Sequence": "0",
+        "StationObsStatus": {
+         "StationStatus": "0",
+         "ObservedPropertyNames": "WaveHeight,WaveDirection,WaveDirectionDescription,WavePeriod,WindSpeed,WindScale,WindDirection,WindDirectionDescription,MaximumWindSpeed,MaximumWindScale,SeaTemperature,Temperature,StationPressure,CurrentDirection,CurrentDirectionDescription,CurrentSpeed,CurrentSpeedInKnots",
+         "ObservedProperties": {
+          "TideHeight": {
+           "ObsStatus": "0"
+          },
+          "TideLevel": {
+           "ObsStatus": "0"
+          },
+          "WaveHeight": {
+           "ObsStatus": "0"
+          },
+          "WaveDirection": {
+           "ObsStatus": "0"
+          },
+          "WaveDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "WavePeriod": {
+           "ObsStatus": "0"
+          },
+          "WindSpeed": {
+           "ObsStatus": "0"
+          },
+          "WindScale": {
+           "ObsStatus": "0"
+          },
+          "WindDirection": {
+           "ObsStatus": "0"
+          },
+          "WindDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindSpeed": {
+           "ObsStatus": "0"
+          },
+          "MaximumWindScale": {
+           "ObsStatus": "0"
+          },
+          "SeaTemperature": {
+           "ObsStatus": "0"
+          },
+          "Temperature": {
+           "ObsStatus": "0"
+          },
+          "StationPressure": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirection": {
+           "ObsStatus": "0"
+          },
+          "CurrentDirectionDescription": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeed": {
+           "ObsStatus": "0"
+          },
+          "CurrentSpeedInKnots": {
+           "ObsStatus": "0"
+          }
+         },
+         "StationObsTimes": null
+        }
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

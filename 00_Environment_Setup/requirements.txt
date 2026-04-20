@@ -1,4 +1,4 @@
-# Web Scraping Requirements for Python 3.14
+# Web Scraping Requirements for Python 3.12
 # Core HTTP library
 requests>=2.32.0
 
@@ -19,4 +19,10 @@ tzdata
 pandas>=2.2.0
 
 # 環境變數管理工具
-python-dotenv
+dotenv
+
+# 輕量級驗證碼辨識開源庫
+ddddocr
+
+# 讓 Jupyter能夠與Python 環境溝通的橋樑
+ipykernel

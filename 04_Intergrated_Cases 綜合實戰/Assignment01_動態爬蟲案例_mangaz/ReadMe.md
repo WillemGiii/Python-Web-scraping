@@ -44,7 +44,7 @@
    * `project_mangaz` 資料夾
    * 您的 `.py` 或 `.ipynb` 執行檔
    * 本 `README.md` 說明文件
-3. **提交作業**：將 **GitHub Repo 連結** 以及 **影片連結** 透過 Email 寄給老師。
+3. **提交作業**：將 **GitHub Repo 連結** 以及 **影片連結** 透過 Email 寄給老師。※信箱: willemgi@ispan.com.tw ，屬名你是誰(班別、學號、姓名)
 
 ---
 

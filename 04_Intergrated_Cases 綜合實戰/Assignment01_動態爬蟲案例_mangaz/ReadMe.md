@@ -41,7 +41,7 @@
 
 1. **程式碼模組化**：將老師提供的程式碼邏輯包裝成 `def` (函式)，並整理輸出為一個標準的 `.py` 檔案。
 2. **專案結構要求**：使用 GitHub 平台來提交作業。您的 Repository 內至少需要包含：
-   * `project_gutenberg` 資料夾
+   * `project_mangaz` 資料夾
    * 您的 `.py` 或 `.ipynb` 執行檔
    * 本 `README.md` 說明文件
 3. **提交作業**：將 **GitHub Repo 連結** 以及 **影片連結** 透過 Email 寄給老師。
@@ -53,7 +53,7 @@
 ```text
 your-repo-name/
 │
-├── project_gutenberg/       # 依據進階目標要求建立之資料夾
+├── project_mangaz/       # 依據進階目標要求建立之資料夾
 ├── downloaded_manga/        # 程式執行後存放漫畫圖片的資料夾 (名稱可自訂)
 ├── assignment01_scraper.py  # 100分條件：包裝成 def 的 Python 執行檔
 └── README.md                # 專案說明文件

@@ -170,6 +170,6 @@ pip install -r .\00_Environment_Setup\requirements.txt
 <div align="center">
 
 **祝您學習順利！** 🚀  
-如有任何疑問，請於課堂中提出，或透過課程平台與講師聯繫。
+如有任何疑問，請於課堂中提出，或透過Email與講師聯繫。
 
 </div>

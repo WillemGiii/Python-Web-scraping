@@ -2,9 +2,9 @@
 104 人力銀行職缺爬蟲 — 完整 Pipeline
 ======================================
 本模組整合以下三個獨立程式的功能：
-    - request_data.py   : 透過 104 API 爬取職缺資料並存成 JSON
-    - json2DataFrame.py : 將 JSON 資料轉換為 DataFrame / CSV
-    - Postprocessing.py : 篩選 Python 職缺、處理薪資面議、清洗學歷欄位並輸出結果
+    - module1_request_data.py   : 透過 104 API 爬取職缺資料並存成 JSON
+    - module2_json2DataFrame.py : 將 JSON 資料轉換為 DataFrame / CSV
+    - module3_Postprocessing.py : 篩選 Python 職缺、處理薪資面議、清洗學歷欄位並輸出結果
 
 執行流程 (Pipeline):
     Step 1  爬蟲請求 (Crawling)
@@ -36,16 +36,22 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 # ===========================================================================
+# 日誌設定 (Logging Configuration)
+# ===========================================================================
+logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+logger = logging.getLogger(__name__)
+
+# ===========================================================================
 # 第三方函式庫
 # ===========================================================================
 import pandas as pd
 import requests
 
-# ===========================================================================
-# 日誌設定 (Logging Configuration)
-# ===========================================================================
-logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
-logger = logging.getLogger(__name__)
+try:
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+except ImportError as e:
+    logger.error("未偵測到 transformers 套件。請執行 'pip install transformers torch' 安裝必要依賴。")
+    raise e
 
 # ===========================================================================
 # 常數設定 (Constants)
@@ -85,9 +91,11 @@ COOKIES: Dict[str, str] = {
     ),
     "_hjMinimizedPolls": "1649289",
     "FOLLOW_JOB_PROMPT": "0",
+    "_clck": "yuqoyu%5E2%5Eg2v%5E0%5E2156",
     "ACUD": "9b677be5-2b63-462c-87ca-491cda1f841d",
     "LLM": "identity",
     "job_same_ab": "1",
+    "c_job_view_job_info_nabi": "8sbho%2C2008003003%2C2008003002%2C2007001020",
     "cf_clearance": (
         "mB6MPxCcuxwz9amoSrwULqn1y_bp50oPChKbJjbEHog-1772617166-1.2.1.1-"
         "kLMictM4olW5QEK1cw9KdEE86IySjElHWUOIfYBKyyukw1XJDIb4FCsPSw56BSK"
@@ -95,10 +103,67 @@ COOKIES: Dict[str, str] = {
         "CeUmI_7ZQv78vhWzaCNuXfMTEXBk3l4MihtUFzAq1BDQl6uFcCrCuc2ScpILQew"
         "Srzzil.VxS9_4zbg4Q44OCjhqVJGtBygEdKlusjjQTgxiQ"
     ),
+    "__cf_bm": (
+        "Z78AvU1h5Aze5avFOQyAmG4JN8QnSYLhuCMjjK5cuqM-1773113029-1.0.1.1-"
+        "ZvVxF02M_JDGzFNDRSFZR_06.JeymSsvg3Q5nIWy8LmwrkG07rmABtfCTvrtZqK"
+        "Ut037SMmMXdrI4eFL5DQD.gTeMujJ5oRif6UVEf3IVlc"
+    ),
+    "_cfuvid": "5t9yvre.T6hhNNgcjxJH.jgztAPX.T6uD46uN7yl7b8-1773113029160-0.0.1.1-604800000",
+    "_hjSession_3218023": (
+        "eyJpZCI6ImE5NWFkNDFkLWI2ZWMtNDY3MC04MzYyLWIyZGE3ODkzNTY4NCIs"
+        "ImMiOjE3NzMxMTMwMzIxODMsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwi"
+        "c2UiOjAsImZzIjowLCJzcCI6MX0="
+    ),
+    "_hjHasCachedUserAttributes": "true",
+    "_hp2_ses_props.3192618648": (
+        "%7B%22r%22%3A%22https%3A%2F%2Fwww.104.com.tw%2F%22%2C%22ts%22%3A"
+        "1773113038490%2C%22d%22%3A%22signin.104.com.tw%22%2C%22h%22%3A"
+        "%22%2F%22%7D"
+    ),
+    "_hp2_id.3192618648": (
+        "%7B%22userId%22%3A%227035907387929425%22%2C%22pageviewId%22%3A"
+        "%223533035492830499%22%2C%22sessionId%22%3A%223312313741047499"
+        "%22%2C%22identity%22%3Anull%2C%22trackerVersion%22%3A%224.0%22%7D"
+    ),
+    "AC": "1773113061",
     "EPK": "47cd24cd-d6e8-4802-9642-e316741bbb38",
+    "_f": (
+        "eyJpdiI6IlVCbXdoc2tpVEhtOWo4UjBrRjlDRlE9PSIsInZhbHVlIjoiejNl"
+        "eVg4STNKNHVoNC96V3RsZUtaWU1wOW8yTWhnSmt4S21ydm4zc2VPOE5XZmdC"
+        "Tzd5Q29rU0J0K2EyZFJJNE5SNWlJYVFERDI4MTdWWXgrUjJhWnc9PSIsIm1h"
+        "YyI6ImVjOTliOGU2NmZiOTZlMzYxNWQ2YTcxOTcxZGM0NGY2NjdiZDY0N2Ew"
+        "NzY3MDNhNzAwYzBmNTY5ZmYyOTVjMDUiLCJ0YWciOiIifQ=="
+    ),
     "JBCLOGIN": "vP0m3OeNBVNG34YvwJxJX5VWDMHX49G3Fz2rQggts9ysu",
+    "_ga_TTXLT7SQ8E": "GS2.1.s1773113038$o2$g1$t1773113065$j33$l0$h0",
+    "c_white_bar_token": (
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2pv"
+        "Yi1ub3RpZnkuMTA0ZGMuY29tIiwic3ViIjoiJCQ6djE6TVowN1k4TWs3a0Z0"
+        "ak1EYUFLd21rM0I3VGNVR1Nfdmh6TEl2MnpmMmQ3ejFVQlJ6a01oTGtnIiwi"
+        "aWF0IjoxNzczMTEzMDY2LjQ3MDQ5NywiZXhwIjoxNzczMTE2NjY2LjQ3MDQ5"
+        "N30.zJxHn7C3uVgM1f3ywR1wU0GepyNUGcSLz-wijp96YZI,"
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJub3RpZmljYXRp"
+        "b24uMTA0ZGMuY29tIiwiaWF0IjoxNzczMTEzMDY3LjA1ODQxMywiZXhwIjox"
+        "NzczMTE2NjY3LjA1ODQxMywicHJvZHVjdCI6ImpvYl9ub3RpZnlfc2Vydmlj"
+        "ZSIsImVuZHBvaW50IjoiY18wYjA3MTljOThmNjJjZDhmNzQ5NmEwY2Q4NzMx"
+        "OTYzZSJ9.S25IjTg_1AzKBUAx9dvbUVrrEjejixXXFsanPU7lVW0"
+    ),
+    "c_white_bar_token_authentication": "95b15f8f9d52c8446fe833d0b34e82dc",
+    "c_login_return_47cd24cd-d6e8-4802-9642-e316741bbb38_pc": "1",
+    "c_white_bar_user_data": "%E5%B5%87%E5%A8%81%E5%A3%AC%2Cgiwalrian50902%40gmail.com",
+    "personal-recommend-jobs-groups": "5",
+    "c_white_bar_latest_match_time": "2026-03-10%2011%3A24%3A27",
+    "cust_same_ab": "1",
+    "bprofile_history": "%5B%2215741283000%22%2C%22130000000229061%22%2C%2253003028000%22%5D",
+    "_gcl_au": "1.1.881971169.1772019135.1212824636.1773113078.1773113078",
+    "lup": "2146175082.4507568175053.4623532291991.1.4640712161167",
+    "lunp": "4623532291991",
     "c_job_search": "1",
+    "_T_MYPOOL_104I": "4",
     "PROTOCOL104": "http",
+    "_ga_FJWMQR9J2K": "GS2.1.s1773113031$o12$g1$t1773113358$j54$l0$h0",
+    "_ga_WYQPBGBV8Z": "GS2.4.s1773113031$o10$g1$t1773113358$j54$l0$h0",
+    "_ga_W9X1GB1SVR": "GS2.1.s1773113031$o12$g1$t1773113359$j53$l0$h0",
 }
 
 # --- 薪資面議替代估計值 ---
@@ -107,6 +172,38 @@ SALARY_NEGOTIABLE_HIGH: int = 55_000
 
 # --- API 端點 ---
 API_URL: str = "https://www.104.com.tw/jobs/search/api/jobs"
+
+
+def translate_chinese_to_english(text: str) -> str:
+    """將中文文本翻譯為英文。
+
+    使用 Hugging Face 的 AutoTokenizer 與 AutoModelForSeq2SeqLM
+    載入 Helsinki-NLP/opus-mt-zh-en 模型以進行 Seq2Seq 機器翻譯。
+
+    Args:
+        text (str): 欲翻譯之中文文本。
+
+    Returns:
+        str: 翻譯完成之英文文本。
+
+    Raises:
+        Exception: 載入模型或進行翻譯推論失敗時拋出。
+    """
+    model_name: str = "Helsinki-NLP/opus-mt-zh-en"
+    try:
+        logger.info(f"開始載入機器翻譯模型：{model_name}...")
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+
+        logger.info("模型載入成功，開始進行關鍵字翻譯...")
+        inputs = tokenizer(text, return_tensors="pt")
+        outputs = model.generate(**inputs, max_length=50)
+        translated_text: str = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        logger.info(f"關鍵字翻譯完成。中文：'{text}' -> 英文：'{translated_text}'")
+        return translated_text
+    except Exception as e:
+        logger.error(f"翻譯關鍵字時發生異常。詳細錯誤：{e}")
+        raise e
 
 
 # ===========================================================================
@@ -284,6 +381,15 @@ def filter_for_only_python(file_path: Path) -> pd.DataFrame:
 
     df = pd.DataFrame(data)
 
+    # 防禦性檢查：若 DataFrame 為空或沒有指定欄位，則回傳具有預期欄位的空 DataFrame
+    if df.empty or "工作內容摘要" not in df.columns:
+        logger.warning("資料來源為空或缺少 '工作內容摘要' 欄位，回傳空 DataFrame。")
+        return pd.DataFrame(columns=[
+            "編號", "發布日期", "職缺名稱", "工作內容摘要", "公司名稱",
+            "產業描述", "最低薪資", "最高薪資", "學歷要求代碼清單",
+            "具體的軟硬體技能要求", "目前應徵人數", "工作連結"
+        ])
+
     # na=False：若該欄位為空值 (NaN)，不會引發錯誤而預設為 False
     condition = df["工作內容摘要"].str.lower().str.contains("python", na=False)
     return df[condition]
@@ -426,16 +532,27 @@ def export_dataframe_to_csv(df: pd.DataFrame, output_path: Path) -> None:
 # ===========================================================================
 
 if __name__ == "__main__":
+    import sys
+    # -----------------------------------------------------------------------
+    # Step 0：關鍵字翻譯
+    # -----------------------------------------------------------------------
+    # 支援以命令列引數傳入關鍵字，避免 pipe 模式下的終端機編碼衝突
+    if len(sys.argv) > 1:
+        search_keyword: str = sys.argv[1]
+    else:
+        search_keyword = input("請輸入要搜尋的職缺關鍵字：")
+        
+    t_search_keyword: str = translate_chinese_to_english(search_keyword)
+    safe_keyword: str = t_search_keyword.strip().replace(" ", "_")
+
     # -----------------------------------------------------------------------
     # Step 1：爬蟲請求
     # -----------------------------------------------------------------------
-    search_keyword: str = input("請輸入要搜尋的職缺關鍵字：")
-
     extracted_jobs: List[Dict[str, Any]] = crawl_104_jobs(keyword=search_keyword)
 
-    # 將爬蟲結果存為 JSON 暫存檔
+    # 將爬蟲結果存為 JSON 暫存檔，檔名動態結合安全關鍵字
     base_dir: Path = Path(__file__).parent
-    raw_json_path: Path = base_dir / "raw_jobs.json"
+    raw_json_path: Path = base_dir / f"raw_jobs_{safe_keyword}.json"
     save_raw_json(data=extracted_jobs, output_path=raw_json_path)
 
     # -----------------------------------------------------------------------
@@ -455,12 +572,15 @@ if __name__ == "__main__":
     # -----------------------------------------------------------------------
     # Step 3：資料匯出
     # -----------------------------------------------------------------------
-    # 3-1. 輸出後處理結果 JSON
-    processed_json_path: Path = base_dir / "python_jobs.json"
-    export_dataframe_to_json(df=python_df, output_path=processed_json_path)
+    if python_df.empty:
+        logger.warning("後處理完成，未找到任何符合 'python' 關鍵字的職缺。將跳過匯出 JSON 與 CSV 檔案之步驟。")
+    else:
+        # 3-1. 輸出後處理結果 JSON，檔名動態結合安全關鍵字
+        processed_json_path: Path = base_dir / f"processed_jobs_{safe_keyword}.json"
+        export_dataframe_to_json(df=python_df, output_path=processed_json_path)
 
-    # 3-2. 輸出 CSV（供 Excel 開啟）
-    csv_path: Path = base_dir / "python_jobs.csv"
-    export_dataframe_to_csv(df=python_df, output_path=csv_path)
+        # 3-2. 輸出 CSV（供 Excel 開啟），檔名動態結合安全關鍵字
+        csv_path: Path = base_dir / f"processed_jobs_{safe_keyword}.csv"
+        export_dataframe_to_csv(df=python_df, output_path=csv_path)
 
     logger.info("Pipeline 全部完成。")

@@ -26,3 +26,21 @@ ddddocr
 
 # 讓 Jupyter能夠與Python 環境溝通的橋樑
 ipykernel
+
+# 模型工具箱
+transformers
+
+# 模型運算引擎
+torch
+
+# 模型的「翻譯前處理剪刀」
+sentencepiece
+
+# 環境變數管理工具，用於讀取 .env 檔案以安全設定金鑰 (如 Hugging Face Token, API Keys)
+python-dotenv
+
+# 中文與英文間的分詞處理時，強烈依賴外部套件
+sacremoses 
+
+# 用於網頁自動化、測試及繞過機器人偵測的 API
+seleniumbase

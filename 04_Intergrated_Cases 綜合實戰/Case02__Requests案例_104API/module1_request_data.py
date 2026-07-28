@@ -1,13 +1,42 @@
 import logging
 import time
+from pathlib import Path
 import requests
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from typing import Any, Dict, List
 import json
+
 
 search_keyword = input("請輸入要搜尋的職缺關鍵字：")
 # 設定日誌（Logging）基礎配置
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
+
+def translate_chinese_to_english(text: str) -> str:
+    """將中文文本翻譯為英文。
+    
+    使用 Hugging Face 的 AutoTokenizer 與 AutoModelForSeq2SeqLM 
+    載入 Helsinki-NLP/opus-mt-zh-en 模型以進行 Seq2Seq 機器翻譯。
+    
+    Args:
+        text (str): 欲翻譯之中文文本。
+        
+    Returns:
+        str: 翻譯完成之英文文本。
+    """
+    model_name = "Helsinki-NLP/opus-mt-zh-en"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+    
+    inputs = tokenizer(text, return_tensors="pt")
+    outputs = model.generate(**inputs, max_length=50)
+    translated_text: str = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return translated_text
+
+# 中文關鍵字翻譯成英文
+t_search_keyword = translate_chinese_to_english(search_keyword)
+
+safe_keyword = t_search_keyword.strip().replace(" ", "_")
 
 def parse_api_response(response: requests.Response) -> Dict[str, Any]:
     """解析來自 104 API 的 Response 物件並回傳為 Python 字典。
@@ -202,6 +231,7 @@ for job in all_jobs_data:
     
     Num += 1
 
-file_name = '2026AprilSoftwareEngineer.json'
-with open(file_name, 'w', encoding='utf-8') as f:
+
+file_path = Path(f"{safe_keyword}.json")
+with file_path.open("w", encoding="utf-8") as f:
     json.dump(final_extracted_list, f, ensure_ascii=False, indent=4)
